@@ -1,7 +1,5 @@
 class Photo < ApplicationRecord
-  belongs_to :room
+  belongs_to :event
 
   mount_uploader :image, ImageUploader
-
-  
 end
