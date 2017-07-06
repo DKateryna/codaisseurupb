@@ -7,4 +7,8 @@ class Event < ApplicationRecord
   validates :includes_drinks, presence: false
   validates :active, presence: true
   validates :description, presence: true, length: { maximum: 500 }
+
+
+  has_many :photos
+
 end
