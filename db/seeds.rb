@@ -1,8 +1,12 @@
 Photo.destroy_all
-#Theme.destroy_all
+Category.destroy_all
 Event.destroy_all
 #Profile.destroy_all
 User.destroy_all
+
+music = Category.create!(name: "Looking for a rhythm together.")
+tourism = Category.create!(name: "Discover the world together!")
+hobby = Category.create!(name: "Connect and Interact with other hobby enthusiasts that share your excitement.")
 
 miriam = User.create!(email: "miriam@codaisseurupb.com", password: "abcd1234")
 tom = User.create(email: "tom@cat.com", password: "meowmeow")

@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     end
 
     def show
-    #  @themes = @event.themes
+      @categories = @event.categories
       @photos = @event.photos
     end
 
@@ -64,7 +64,7 @@ class EventsController < ApplicationController
         .require(:event)
         .permit(
           :name, :description, :location, :price, :capacity, :includes_food,
-          :includes_drinks, :starts_at, :end_at, :active, :created_at, :updated_at
+          :includes_drinks, :starts_at, :end_at, :active, :created_at, :updated_at, category_ids:[]
         )
     end
 
