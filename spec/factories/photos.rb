@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :photo do
-    room nil
     image "MyString"
+    event nil
   end
 end
