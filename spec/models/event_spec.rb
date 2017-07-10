@@ -46,7 +46,7 @@ RSpec.describe Event, type: :model do
     let(:category2) { create :category, name: 'Clean lines', events: [event] }
     let(:category3) { create :category, name: "A Man's Touch", events: [event] }
 
-    it 'has themes' do
+    it 'has categories' do
       expect(event.categories).to include(category1)
       expect(event.categories).to include(category2)
       expect(event.categories).to include(category3)
