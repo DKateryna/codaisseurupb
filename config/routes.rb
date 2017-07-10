@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :profiles
 
   namespace :api do
-    resources :events
+    resources :events do
+      resources :registration, only: %i[create update destroy]
+    end
   end
 end

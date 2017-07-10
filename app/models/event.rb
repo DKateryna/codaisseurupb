@@ -11,4 +11,11 @@ class Event < ApplicationRecord
   validates :description, presence: true, length: { maximum: 500 }
 
   has_many :photos
+  def bargain?
+    price < 30
+  end
+
+  def self.order_by_price
+    order :price
+  end
 end
