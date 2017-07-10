@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :events, except: [:destroy]
   resources :photos
-  resources :profiles, only: %i[new edit create update]
+  resources :profiles
 
   namespace :api do
     resources :events
