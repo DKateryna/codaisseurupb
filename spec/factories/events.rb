@@ -1,14 +1,14 @@
 FactoryGirl.define do
   factory :event do
-    name              'Buite Westen'
+    name              { Faker::Name.name }
     description       { Faker::Lorem.sentence(1) }
     location          { Faker::Address.city }
     price             { Faker::Commerce.price }
     capacity          2000
     includes_food     false
     includes_drinks   false
-    starts_at         { Faker::Date.starts_at }
-    ends_at           { Fake::Date.ends_at }
+    starts_at         '2017-07-15'
+    ends_at           '2017-07-16'
     active            true
     user              { build(:user) }
 
