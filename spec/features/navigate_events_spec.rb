@@ -6,7 +6,7 @@ describe 'Navigating events' do
   let(:user) { create :user }
   let!(:event) { create :event, user: user }
 
-  it 'allows navigation from the detail page to the listing page' do
+  it 'allows navigation from the detail page to the index page' do
     visit event_url(event)
 
     click_link 'Back'
@@ -14,7 +14,7 @@ describe 'Navigating events' do
     expect(current_path).to eq(events_path)
   end
 
-  it 'allows navigation from the listing page to the detail page' do
+  it 'allows navigation from the index page to the detail page' do
     visit events_url
 
     click_link 'View'
