@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :events, except: [:destroy]
   resources :photos
   resources :profiles
+  get 'about' => 'pages#about'
 
   namespace :api do
     resources :events do
