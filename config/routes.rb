@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :photos
   resources :profiles
   get 'about' => 'pages#about'
+  get 'terms_and_conditions' => 'pages#terms_and_conditions'
 
   namespace :api do
     resources :events do
