@@ -47,6 +47,7 @@ group :test do
   gem 'factory_girl_rails', '4.7.0'
   gem 'faker', '1.6.6'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'launchy' 
 end
 
 group :development do
